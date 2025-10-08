@@ -4,9 +4,79 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Marco Svec</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body style="font-family: sans-serif; text-align: center; padding-top: 100px;">
-    <h1>Hello, world 👋</h1>
-    <p>Welcome to marcosvec.com — under construction.</p>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#home">Marco Svec</a>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌓</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div class="container">
+        <h1>Marco Svec</h1>
+        <p>Welcome to marcosvec.com — under active development.</p>
+        <div class="cta-group">
+          <a class="button" href="#projects">View Projects</a>
+          <a class="button secondary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </main>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          Passionate Mechanical & Aerospace Engineering dual major at RPI. In my free time, I build projects in CAD.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid" id="projectGrid">
+          <!-- Cards will be injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contactForm" class="card" novalidate>
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" required placeholder="How can I help?"></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Marco Svec</small>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

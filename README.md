@@ -1,101 +1,80 @@
-# Interactive 3D Dorm Room
+# Marco Svec - Portfolio Website
 
-A fully interactive 3D render of a dorm room built with Three.js, featuring modular GLB model loading and advanced performance optimizations.
+A modern, responsive portfolio website showcasing Marco Svec's work in Mechanical & Aerospace Engineering, CAD modeling, and interactive web development.
+
+## About
+
+This is the personal portfolio website for Marco Svec, a Mechanical & Aerospace Engineering student at Rensselaer Polytechnic Institute (RPI). The site showcases his projects, skills, and professional experience in engineering and web development.
 
 ## Features
 
-### 🎥 Camera & Navigation
-- **Corner-view camera** positioned for optimal room viewing
-- Smooth orbit controls with damping
-- Zoom and pan restrictions for realistic movement
-- Responsive camera adjustments
+### 🎨 Modern Design
+- **Dark/Light theme** toggle with system preference detection
+- **Responsive design** optimized for all devices
+- **Smooth animations** and transitions
+- **Accessibility-first** approach with ARIA labels and keyboard navigation
 
-### 🏷️ Interactive Elements
-- **Hover labels** on all interactive objects
-- **Click interactions** for drawers, doors, and furniture
-- Smooth animations with easing functions
-- Contextual information display
+### 📱 User Experience
+- **Mobile-first** responsive design
+- **Fast loading** with optimized assets
+- **Smooth scrolling** navigation
+- **Interactive contact form** with validation
 
-### ⚙️ Graphics Presets
-- **Low/Medium/High** quality settings
-- Dynamic shadow map resolution adjustment
-- Adaptive anti-aliasing
-- Performance-based quality scaling
-
-### 📏 Measurement Tools
-- **Measure mode** for distance calculations
-- Click-to-measure functionality
-- Real-time distance display in inches
-- Visual measurement feedback
-
-### 💥 Advanced Features
-- **Exploded view** toggle for furniture parts
-- **Reduce motion** accessibility support
-- **FPS + VRAM overlay** with hideable display
-- **Modular GLB model loading** system
-
-### 🚀 Performance Optimizations
-- Adaptive quality adjustment based on FPS
-- Low-end device detection and optimization
-- Texture compression support detection
-- Memory management and cleanup
-- GitHub Pages deployment optimizations
+### 🚀 Technical Features
+- **Vanilla JavaScript** (ES6+) for optimal performance
+- **CSS Grid & Flexbox** for modern layouts
+- **Font Awesome** icons for visual elements
+- **GitHub Pages** deployment ready
 
 ## File Structure
 
 ```
 marcosvec.github.io/
-├── interactive-room.html    # Main application file
-├── model-loader.js         # Modular GLB model loading system
-├── performance-optimizer.js # Performance optimization utilities
-├── styles.css              # Main site styles
-├── script.js               # Main site JavaScript
-└── index.html              # Landing page
+├── index.html              # Main portfolio landing page
+├── projects.html           # Detailed projects showcase
+├── styles.css              # Complete site styling
+├── script.js               # Main site JavaScript functionality
+├── CNAME                   # Custom domain configuration
+├── LICENSE                 # MIT license
+└── README.md               # This file
 ```
 
-## Usage
+## Pages
 
-### Basic Setup
-1. Open `interactive-room.html` in a web browser
-2. Use mouse to navigate around the room
-3. Hover over objects for information
-4. Click on drawers and doors to interact
+### Home (`index.html`)
+- **Hero section** with introduction and call-to-action
+- **About section** highlighting engineering focus and expertise
+- **Featured projects** overview with links to detailed pages
+- **Contact modal** for easy communication
 
-### Controls
-- **Mouse drag**: Look around
-- **Scroll wheel**: Zoom in/out
-- **Graphics preset**: Change quality settings
-- **Measure mode**: Click two points to measure distance
-- **Exploded view**: Toggle furniture part separation
-- **GLB Models**: Switch between procedural and GLB models
+### Projects (`projects.html`)
+- **Interactive 3D Room** project showcase
+- **CAD Modeling Projects** portfolio
+- **Performance Optimization** work and metrics
+- **Technology tags** and detailed descriptions
 
-### Model Integration
-To use your Siemens NX → Blender → GLB models:
+## Technologies Used
 
-1. Place GLB files in a `models/` directory
-2. Update `FURNITURE_CONFIG` in `model-loader.js`
-3. Enable GLB models using the toggle button
-4. Models will load dynamically with fallback to procedural
+- **HTML5** - Semantic markup and accessibility
+- **CSS3** - Modern styling with custom properties and Grid/Flexbox
+- **JavaScript ES6+** - Interactive functionality and theme management
+- **Font Awesome** - Icon library for visual elements
+- **GitHub Pages** - Static site hosting
 
-## Technical Details
+## Customization
 
-### Architecture
-- **Modular design** with separate concerns
-- **State management** for all application data
-- **Event-driven** interaction system
-- **Performance monitoring** with adaptive quality
+### Theme System
+The site uses CSS custom properties for theming:
+- Dark theme (default)
+- Light theme toggle
+- System preference detection
+- Persistent theme storage
 
-### Performance Features
-- **Adaptive quality** based on device capabilities
-- **Memory management** with proper disposal
-- **CDN fallbacks** for reliable loading
-- **Compression detection** for optimal delivery
-
-### Accessibility
-- **Reduce motion** preference detection
-- **Keyboard navigation** support
-- **Screen reader** friendly labels
-- **High contrast** mode support
+### Responsive Breakpoints
+- **Desktop**: 1200px+ container width
+- **Tablet**: 768px - 1199px
+- **Mobile**: 480px - 767px
+- **Small Mobile**: < 480px
 
 ## Browser Support
 - Chrome 60+
@@ -103,18 +82,19 @@ To use your Siemens NX → Blender → GLB models:
 - Safari 12+
 - Edge 79+
 
-## Performance Notes
+## Performance
 - Optimized for GitHub Pages deployment
-- Automatic quality adjustment for low-end devices
-- Efficient memory usage with proper cleanup
-- CDN fallbacks for reliable asset loading
+- Minimal dependencies for fast loading
+- Efficient CSS and JavaScript
+- Responsive images and assets
 
 ## Development
-Built with:
-- Three.js r128
+Built with modern web standards:
+- Semantic HTML5
+- CSS3 with custom properties
 - Vanilla JavaScript (ES6+)
-- CSS3 with modern features
-- WebGL 1.0/2.0 support
+- Mobile-first responsive design
+- Accessibility best practices
 
 ## License
 MIT License - feel free to use and modify for your projects.

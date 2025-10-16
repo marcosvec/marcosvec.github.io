@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Marco Svec's Projects - Interactive 3D Room, CAD Models, and Performance Optimization work.">
+    <meta name="keywords" content="Marco Svec, Projects, CAD, 3D modeling, Three.js, Engineering">
+    <meta name="author" content="Marco Svec">
+    <title>Projects - Marco Svec</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const currentClass = document.documentElement.classList.contains('light') ? 'light' : 'dark';
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlTheme = urlParams.get('theme');
+        if (urlTheme && (urlTheme === 'light' || urlTheme === 'dark')) {
+          if (urlTheme === 'light') {
+            document.documentElement.classList.add('light');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.classList.remove('light');
+            localStorage.setItem('theme', 'dark');
+          }
+        } else if (saved === 'light') {
+          document.documentElement.classList.add('light');
+        } else if (saved === 'dark') {
+          document.documentElement.classList.remove('light');
+        } else {
+          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (prefersLight) {
+            document.documentElement.classList.add('light');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.classList.remove('light');
+            localStorage.setItem('theme', 'dark');
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle navigation sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+      </div>
+      
+      <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link" id="homeLink">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="index.html#about" class="nav-link">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+        </a>
+        <a href="projects.html" class="nav-link active">
+          <i class="fas fa-folder-open"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#contact" class="nav-link" id="contactLink">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+      </div>
+    </aside>
+
+    <div class="floating-name" id="floatingName">
+      <h2>Marco Svec</h2>
+    </div>
+
+    <div class="persistent-icons">
+      <a href="https://github.com/marcosvec" target="_blank" rel="noopener" class="persistent-icon" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/marco-svec-042b4a23b?trk=people-guest_people_search-card" target="_blank" rel="noopener" class="persistent-icon" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <button id="persistentThemeToggle" aria-label="Toggle theme" title="Toggle theme" type="button">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <main class="main-content">
+      <section class="projects-hero">
+        <div class="container">
+          <h1>My Projects</h1>
+          <p>Explore my work in interactive 3D visualization, CAD modeling, and performance optimization.</p>
+        </div>
+      </section>
+
+      <section id="interactive-3d-room" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>Interactive 3D Dorm Room</h2>
+            <div class="project-links">
+              <a href="interactive-room.html" class="button" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Visit Project
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-description">
+              <h3>Overview</h3>
+              <p>
+                A fully interactive 3D visualization of an RPI dorm room built with Three.js. This project showcases real-time 3D rendering, interactive furniture manipulation, and advanced performance optimization techniques for web-based 3D applications.
+              </p>
+              
+              <h3>Key Features</h3>
+              <ul>
+                <li><strong>Real-time 3D Rendering:</strong> Smooth 60 FPS rendering with adaptive quality adjustment</li>
+                <li><strong>Interactive Elements:</strong> Click and hover interactions with furniture pieces</li>
+                <li><strong>Measurement Tools:</strong> Built-in distance measurement functionality</li>
+                <li><strong>Exploded View:</strong> Toggle between assembled and exploded furniture views</li>
+                <li><strong>Graphics Presets:</strong> Low/Medium/High quality settings for different devices</li>
+                <li><strong>Performance Monitoring:</strong> Real-time FPS and VRAM usage display</li>
+              </ul>
+
+              <h3>Technical Details</h3>
+              <p>
+                Built using Three.js for 3D rendering, OrbitControls for camera manipulation, and custom performance optimization algorithms. The project features modular GLB model loading, adaptive quality scaling based on device capabilities, and comprehensive memory management.
+              </p>
+              
+              <h3>Technologies Used</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cad-modeling" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>CAD Modeling Projects</h2>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-description">
+              <h3>Overview</h3>
+              <p>
+                A collection of mechanical and aerospace engineering projects created using industry-standard CAD software including Siemens NX and SolidWorks. These projects demonstrate proficiency in complex part modeling, assembly design, and technical documentation.
+              </p>
+              
+              <h3>Project Types</h3>
+              <ul>
+                <li><strong>Mechanical Assemblies:</strong> Complex multi-part systems with detailed component interactions</li>
+                <li><strong>Aerospace Components:</strong> Precision-engineered parts for aerospace applications</li>
+                <li><strong>Furniture Design:</strong> Parametric models of dorm furniture with accurate dimensions</li>
+                <li><strong>Technical Drawings:</strong> Detailed engineering drawings with GD&T annotations</li>
+              </ul>
+
+              <h3>Software Proficiency</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Siemens NX</span>
+                <span class="tech-tag">SolidWorks</span>
+                <span class="tech-tag">Blender</span>
+                <span class="tech-tag">AutoCAD</span>
+              </div>
+
+              <h3>Skills Demonstrated</h3>
+              <ul>
+                <li>Parametric modeling and design intent</li>
+                <li>Assembly modeling and constraints</li>
+                <li>Surface modeling for complex geometries</li>
+                <li>Model export and optimization for web viewing</li>
+                <li>Technical documentation and annotations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="performance-optimization" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>Performance Optimization</h2>
+          </div>
+          
+          <div class="project-content">
+            <div class="project-description">
+              <h3>Overview</h3>
+              <p>
+                Advanced web performance optimization techniques applied to 3D web applications, achieving 44% faster loading times and 47% reduced memory usage through intelligent caching, adaptive quality systems, and memory management.
+              </p>
+              
+              <h3>Optimization Techniques</h3>
+              <ul>
+                <li><strong>Priority-Based Loading:</strong> Intelligent model loading system with high/normal/low priority queues</li>
+                <li><strong>Adaptive Quality:</strong> Real-time quality adjustment based on device capabilities and FPS</li>
+                <li><strong>Memory Management:</strong> Automatic garbage collection and resource cleanup</li>
+                <li><strong>Multi-Layer Caching:</strong> Efficient caching system with size management</li>
+                <li><strong>CDN Optimization:</strong> Fallback systems and compression detection</li>
+              </ul>
+
+              <h3>Performance Metrics</h3>
+              <div class="metrics-grid">
+                <div class="metric">
+                  <h4>44%</h4>
+                  <p>Faster Loading</p>
+                </div>
+                <div class="metric">
+                  <h4>47%</h4>
+                  <p>Less Memory</p>
+                </div>
+                <div class="metric">
+                  <h4>92%</h4>
+                  <p>Cache Efficiency</p>
+                </div>
+                <div class="metric">
+                  <h4>60 FPS</h4>
+                  <p>Stable Frame Rate</p>
+                </div>
+              </div>
+
+              <h3>Technologies & Methods</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Performance API</span>
+                <span class="tech-tag">Memory Profiling</span>
+                <span class="tech-tag">WebGL Optimization</span>
+                <span class="tech-tag">Resource Hints</span>
+                <span class="tech-tag">Lazy Loading</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container">
+          <small>© <span id="year"></span> Marco Svec</small>
+        </div>
+      </footer>
+    </main>
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Contact</h2>
+          <button class="modal-close" id="modalClose" aria-label="Close contact form">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form id="contactForm" class="modal-form" novalidate>
+          <label for="name">
+            <span>Name</span>
+            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" />
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+          </label>
+          <label for="message">
+            <span>Message</span>
+            <textarea id="message" name="message" rows="4" required placeholder="How can I help?"></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+

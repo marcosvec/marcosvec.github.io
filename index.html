@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Marco Svec - Mechanical & Aerospace Engineering student at RPI. Portfolio showcasing CAD projects and interactive 3D experiences.">
+    <meta name="keywords" content="Marco Svec, RPI, Mechanical Engineering, Aerospace Engineering, CAD, 3D modeling">
+    <meta name="author" content="Marco Svec">
+    <title>Marco Svec - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const currentClass = document.documentElement.classList.contains('light') ? 'light' : 'dark';
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlTheme = urlParams.get('theme');
+        if (urlTheme && (urlTheme === 'light' || urlTheme === 'dark')) {
+          if (urlTheme === 'light') {
+            document.documentElement.classList.add('light');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.classList.remove('light');
+            localStorage.setItem('theme', 'dark');
+          }
+        } else if (saved === 'light') {
+          document.documentElement.classList.add('light');
+        } else if (saved === 'dark') {
+          document.documentElement.classList.remove('light');
+        } else {
+          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (prefersLight) {
+            document.documentElement.classList.add('light');
+            localStorage.setItem('theme', 'light');
+          } else {
+            document.documentElement.classList.remove('light');
+            localStorage.setItem('theme', 'dark');
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle navigation sidebar">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+      </div>
+      
+      <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-link active" id="homeLink">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="nav-link">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+        </a>
+        <a href="projects.html" class="nav-link">
+          <i class="fas fa-folder-open"></i>
+          <span>Projects</span>
+        </a>
+        <a href="#contact" class="nav-link" id="contactLink">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+      </div>
+    </aside>
+
+    <div class="floating-name" id="floatingName">
+      <h2>Marco Svec</h2>
+    </div>
+
+    <div class="persistent-icons">
+      <a href="https://github.com/marcosvec" target="_blank" rel="noopener" class="persistent-icon" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/marco-svec-042b4a23b?trk=people-guest_people_search-card" target="_blank" rel="noopener" class="persistent-icon" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <button id="persistentThemeToggle" aria-label="Toggle theme" title="Toggle theme" type="button">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+
+    <main class="main-content">
+      <section id="home" class="hero">
+        <div class="container">
+          <h1>Marco Svec</h1>
+          <p>Mechanical & Aerospace Engineering student at RPI. Building innovative CAD projects and interactive 3D experiences.</p>
+        <div class="cta-group">
+          <a class="button" href="projects.html">
+            <i class="fas fa-folder-open"></i>
+            View Projects
+          </a>
+          <a class="button secondary" href="#contact" id="contactBtn">
+            <i class="fas fa-envelope"></i>
+            Get in Touch
+          </a>
+        </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>Engineering Focus</h3>
+              <p>I'm a passionate dual major in Mechanical & Aerospace Engineering at Rensselaer Polytechnic Institute (RPI), where I combine theoretical knowledge with hands-on creativity.</p>
+            </div>
+            <div class="about-card">
+              <h3>CAD Expertise</h3>
+              <p>My journey in engineering has led me to develop deep expertise in Computer-Aided Design (CAD), where I bring complex mechanical systems to life through precision modeling.</p>
+            </div>
+            <div class="about-card">
+              <h3>Innovation</h3>
+              <p>Beyond traditional engineering, I've ventured into the intersection of engineering and web technologies, creating interactive 3D experiences that showcase mechanical designs in innovative ways.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div class="grid" id="projectGrid">
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container">
+          <small>© <span id="year"></span> Marco Svec</small>
+        </div>
+      </footer>
+    </main>
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Contact</h2>
+          <button class="modal-close" id="modalClose" aria-label="Close contact form">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form id="contactForm" class="modal-form" novalidate>
+          <label for="name">
+            <span>Name</span>
+            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" />
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+          </label>
+          <label for="message">
+            <span>Message</span>
+            <textarea id="message" name="message" rows="4" required placeholder="How can I help?"></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

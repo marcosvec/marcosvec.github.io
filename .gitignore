@@ -1,0 +1,63 @@
+# Private error code system (not for public access)
+private-error-codes.json
+
+# Developer documentation (not for public access)
+DEVELOPER_CHANGELOG.md
+CHANGELOG.md
+
+# 3D Interactive Content (unfinished - not for public access)
+interactive-room.html
+explosion.html
+model-loader.js
+performance-optimizer.js
+debug-addon.js
+debug-functionality.js
+models/
+*.glb
+*.gltf
+*.obj
+*.fbx
+
+# Note: These files are intentionally excluded from commits
+# They can be recreated when needed for development
+
+# Development files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Cache files
+.cache/
+.parcel-cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

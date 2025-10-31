@@ -7,10 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Email Contact Integration**: Added info@marcosvec.com email address throughout website
+  - Displayed in footer on all pages
+  - Added to contact modal with mailto: link
+  - Contact form opens email client with pre-filled message
+  - Added comprehensive email setup guide to DOCUMENTATION.md
+  - Includes step-by-step Namecheap configuration instructions
+  - DMARC setup guide for improved email deliverability
+  - Troubleshooting section for common email forwarding issues
+  - Gmail SMTP configuration instructions
+- **Documentation Consolidation**: Consolidated ALL documentation into designated files only
+  - All documentation moved to DOCUMENTATION.md, CHANGELOG.md, or PRIVATE_DOCUMENTATION.md
+  - Deleted all standalone documentation files (TERMS_OF_SERVICE.md, PRIVACY_POLICY.md, SERVICE_AGREEMENT.md, SHOPIFY_INTEGRATION_ANALYSIS.md, SHOPIFY_INTEGRATION_SUMMARY.md, RENAME_SUMMARY.md, NAME_ANALYSIS.md, NAME_RECOMMENDATIONS.md, ANSWERS.md, GENERATE_LEGAL_DOCS.md)
+  - Established documentation standards: ALL documentation must be in DOCUMENTATION.md, CHANGELOG.md, or PRIVATE_DOCUMENTATION.md only
+  - No standalone documentation files permitted
+### Fixed
+
 ### Planned
 - Performance optimization
 - Accessibility improvements
 - Additional interactive features
+
+## [1.0.2] - 2025-01-27
+
+### Changed
+- File structure reorganization for improved project organization
 
 ## [1.0.1] - 2025-10-31 14:44:22
 

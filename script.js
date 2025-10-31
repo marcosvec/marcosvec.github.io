@@ -361,6 +361,8 @@ let lastScrollY = 0;
 let momentum = 0;
 let deceleration = 0;
 let isInitializing = true;
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function initializeScrollEffects() {
   const aboutCards = document.querySelectorAll('.about-card');
@@ -373,15 +375,25 @@ function initializeScrollEffects() {
   
   const scrollY = window.scrollY;
   
-  aboutCards.forEach((card, index) => {
-    const baseOffset = getBaseOffset(card, index);
-    card.style.transform = `translateY(${baseOffset}px)`;
-  });
-  
-  cards.forEach((card, index) => {
-    const baseOffset = getBaseOffset(card, index);
-    card.style.transform = `translateY(${baseOffset}px)`;
-  });
+  if (!isMobile && !prefersReducedMotion) {
+    aboutCards.forEach((card, index) => {
+      const baseOffset = getBaseOffset(card, index);
+      card.style.transform = `translateY(${baseOffset}px)`;
+    });
+    
+    cards.forEach((card, index) => {
+      const baseOffset = getBaseOffset(card, index);
+      card.style.transform = `translateY(${baseOffset}px)`;
+    });
+  } else {
+    aboutCards.forEach((card) => {
+      card.style.transform = 'none';
+    });
+    
+    cards.forEach((card) => {
+      card.style.transform = 'none';
+    });
+  }
   
   if (floatingName) {
     if (scrollY > 700) {
@@ -436,9 +448,6 @@ window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   const scrollDelta = scrollY - lastScrollY;
   
-  momentum = momentum * 0.9 + scrollDelta * 0.1;
-  deceleration = scrollDelta * 0.2;
-  
   if (floatingName) {
     if (scrollY > 700) {
       floatingName.classList.add('visible');
@@ -447,26 +456,31 @@ window.addEventListener('scroll', () => {
     }
   }
   
-  const aboutCards = document.querySelectorAll('.about-card');
-  const cards = document.querySelectorAll('.card');
-  
-  aboutCards.forEach((card, index) => {
-    const baseOffset = getBaseOffset(card, index);
-    const cardOffset = scrollY * 0.02 + momentum * (0.35 + index * 0.1);
-    card.style.transform = `translateY(${baseOffset + cardOffset}px)`;
-  });
-  
-  cards.forEach((card, index) => {
-    const baseOffset = getBaseOffset(card, index);
-    const cardOffset = scrollY * 0.02 + momentum * (0.35 + index * 0.1);
-    card.style.transform = `translateY(${baseOffset + cardOffset}px)`;
-  });
+  if (!isMobile && !prefersReducedMotion) {
+    momentum = momentum * 0.9 + scrollDelta * 0.1;
+    deceleration = scrollDelta * 0.2;
+    
+    const aboutCards = document.querySelectorAll('.about-card');
+    const cards = document.querySelectorAll('.card');
+    
+    aboutCards.forEach((card, index) => {
+      const baseOffset = getBaseOffset(card, index);
+      const cardOffset = scrollY * 0.02 + momentum * (0.35 + index * 0.1);
+      card.style.transform = `translateY(${baseOffset + cardOffset}px)`;
+    });
+    
+    cards.forEach((card, index) => {
+      const baseOffset = getBaseOffset(card, index);
+      const cardOffset = scrollY * 0.02 + momentum * (0.35 + index * 0.1);
+      card.style.transform = `translateY(${baseOffset + cardOffset}px)`;
+    });
+    
+    if (Math.abs(scrollDelta) > 0) {
+      requestAnimationFrame(animateDeceleration);
+    }
+  }
   
   lastScrollY = scrollY;
-  
-  if (Math.abs(scrollDelta) > 0) {
-    requestAnimationFrame(animateDeceleration);
-  }
   
   const sections = document.querySelectorAll('section[id]');
   const scrollPosition = scrollY + 100;

@@ -156,37 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
-const contactModal = document.getElementById('contactModal');
-const contactLinks = document.querySelectorAll('#contactLink, #contactBtn, a[href="#contact"]');
-const modalClose = document.getElementById('modalClose');
-const contactForm = document.getElementById('contactForm');
-
-contactLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (contactModal) {
-      contactModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  });
-});
-
-if (modalClose && contactModal) {
-  modalClose.addEventListener('click', () => {
-    contactModal.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-}
-
-if (contactModal) {
-  contactModal.addEventListener('click', (e) => {
-    if (e.target === contactModal) {
-      contactModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  });
-}
-
 document.addEventListener('click', (e) => {
   const target = e.target;
   if (target instanceof HTMLAnchorElement && target.getAttribute('href')?.startsWith('#')) {
@@ -267,66 +236,7 @@ if (grid) {
   });
 }
 
-const statusEl = document.getElementById('formStatus');
 
-if (contactForm && statusEl) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const name = String(formData.get('name') || '').trim();
-    const email = String(formData.get('email') || '').trim();
-    const message = String(formData.get('message') || '').trim();
-    
-    if (!name || !email || !message) {
-      setStatus('Please fill out all fields.', 'error');
-      return;
-    }
-    
-    if (!isValidEmail(email)) {
-      setStatus('Please enter a valid email address.', 'error');
-      return;
-    }
-    
-    if (message.length < 10) {
-      setStatus('Message must be at least 10 characters long.', 'error');
-      return;
-    }
-    
-    setStatus('Sending...', 'info');
-    
-    setTimeout(() => {
-      setStatus('Thanks! I will get back to you soon.', 'success');
-      contactForm.reset();
-      
-      setTimeout(() => {
-        if (contactModal) {
-          contactModal.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      }, 2000);
-    }, 700);
-  });
-}
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-function setStatus(text, type = 'info') {
-  if (!statusEl) return;
-  
-  statusEl.textContent = text;
-  statusEl.className = `status-${type}`;
-  
-  if (type === 'success') {
-    setTimeout(() => {
-      statusEl.textContent = '';
-      statusEl.className = '';
-    }, 5000);
-  }
-}
 
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());

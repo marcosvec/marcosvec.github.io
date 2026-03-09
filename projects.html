@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Marco Svec's Projects - Interactive 3D Room, CAD Models, and Performance Optimization work.">
-    <meta name="keywords" content="Marco Svec, Projects, CAD, 3D modeling, Three.js, Engineering">
+    <meta name="description" content="Marco Svec's Projects — CAD, software, and engineering work from RPI and beyond.">
+    <meta name="keywords" content="Marco Svec, RPI, Mechanical Engineering, Aerospace Engineering, CAD, Siemens NX, BikeSuite">
     <meta name="author" content="Marco Svec">
     <title>Projects - Marco Svec</title>
     <link rel="stylesheet" href="styles.css">
@@ -14,8 +14,6 @@
     <script>
       (function() {
         const saved = localStorage.getItem('theme');
-        const currentClass = document.documentElement.classList.contains('light') ? 'light' : 'dark';
-        
         const urlParams = new URLSearchParams(window.location.search);
         const urlTheme = urlParams.get('theme');
         if (urlTheme && (urlTheme === 'light' || urlTheme === 'dark')) {
@@ -49,9 +47,7 @@
     </button>
 
     <aside id="sidebar" class="sidebar">
-      <div class="sidebar-header">
-      </div>
-      
+      <div class="sidebar-header"></div>
       <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav-link" id="homeLink">
           <i class="fas fa-home"></i>
@@ -70,9 +66,7 @@
           <span>Contact</span>
         </a>
       </nav>
-
-      <div class="sidebar-footer">
-      </div>
+      <div class="sidebar-footer"></div>
     </aside>
 
     <div class="floating-name" id="floatingName">
@@ -94,11 +88,135 @@
     <main class="main-content">
       <section class="projects-hero">
         <div class="container">
-          <h1>My Projects</h1>
-          <p>Explore my work in interactive 3D visualization, CAD modeling, and performance optimization.</p>
+          <h1>Projects</h1>
+          <p>A mix of engineering, software, and the occasional rabbit hole that turned into something real.</p>
         </div>
       </section>
 
+      <!-- RPI DORMS SPACE -->
+      <section id="rpi-dorms-space" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>RPI Dorms Space — CAD Lead</h2>
+            <div class="project-links">
+              <a href="interactive-room.html" class="button" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+                View 3D Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-description">
+              <h3>What it is</h3>
+              <p>
+                A collaborative project to model RPI dorm rooms in accurate 3D — furniture, layout, dimensions, the works. I lead the CAD side, which means I'm responsible for building and maintaining the models, establishing modeling standards for the team, and making sure everything is dimensionally accurate enough to be actually useful.
+              </p>
+
+              <h3>My role</h3>
+              <p>
+                As CAD lead, I own the Siemens NX workflow — from initial geometry and parametric constraints to export pipelines that feed into the web viewer. That means keeping parts clean and organized so others on the team can pick up where I leave off without having to untangle a mess of suppressed features.
+              </p>
+              <p>
+                I also built the interactive 3D web viewer that lets you walk through the room, click on furniture, measure distances, and toggle between an assembled view and an exploded one. Getting CAD geometry into a browser in a usable state required a fair amount of mesh optimization and WebGL work.
+              </p>
+
+              <h3>What I learned</h3>
+              <p>
+                Managing a CAD project with multiple contributors is different from just modeling on your own. File structure, naming conventions, and parametric intent matter a lot more when someone else needs to modify your parts six weeks later. I got a lot better at thinking ahead on that front.
+              </p>
+
+              <h3>Stack</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Siemens NX</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">GLB / GLTF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIKESUITE -->
+      <section id="bikesuite" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>BikeSuite — Bike Shop POS</h2>
+            <div class="project-links">
+              <a href="https://bikesuite.net" class="button" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+                Visit bikesuite.net
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-description">
+              <h3>What it is</h3>
+              <p>
+                BikeSuite is a point-of-sale and shop management system I've been building for bike shops, designed to compete with Ascend RMS — the dominant (and expensive) software most shops are stuck with. The idea came from working at Merrick Bicycles, where I do assembly, tune-ups, and repairs, and watching how clunky the existing software workflow is day-to-day.
+              </p>
+
+              <h3>Why I built it</h3>
+              <p>
+                Ascend RMS works, but it's slow, overpriced for small shops, and not designed by anyone who's actually worked a service counter. I wanted to build something that matches how a real shop actually operates — fast ticket creation, sensible inventory lookup, and repair tracking that doesn't require three clicks to find a work order.
+              </p>
+
+              <h3>Where it's at</h3>
+              <p>
+                The core POS and service ticket flow is functional. I'm currently working on integrating AI features — things like predictive maintenance alerts based on service history, dynamic pricing insights from parts costs, and customer lifetime value analysis. The goal is useful business intelligence, not conversational AI for the sake of it.
+              </p>
+              <p>
+                I've also been exploring ways to pull UI components from Uiverse.io into the interface and connect the whole thing to Claude via MCP for some of the backend intelligence features.
+              </p>
+
+              <h3>Stack</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Claude API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAD MODELING -->
+      <section id="cad-modeling" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>CAD Modeling Work</h2>
+          </div>
+
+          <div class="project-content">
+            <div class="project-description">
+              <h3>Overview</h3>
+              <p>
+                A collection of mechanical and aerospace parts and assemblies built over the course of my time at RPI. Some are coursework, some are personal, and some came out of the Dorms Space project. The common thread is trying to model things with real design intent — not just geometry that looks right, but geometry that would actually be manufacturable and modifiable.
+              </p>
+
+              <h3>What I've worked on</h3>
+              <p>
+                Multi-part mechanical assemblies with constrained degrees of freedom, aerospace components requiring tight tolerances, furniture models accurate enough to pull meaningful dimensions from, and technical drawings with proper GD&T annotations. SolidWorks for a lot of coursework, Siemens NX for the Dorms Space project and anything that needs serious parametric control.
+              </p>
+
+              <h3>Software</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Siemens NX</span>
+                <span class="tech-tag">SolidWorks</span>
+                <span class="tech-tag">Blender</span>
+                <span class="tech-tag">AutoCAD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEB 3D VIEWER -->
       <section id="interactive-3d-room" class="project-detail">
         <div class="container">
           <div class="project-header">
@@ -106,111 +224,24 @@
             <div class="project-links">
               <a href="interactive-room.html" class="button" target="_blank">
                 <i class="fas fa-external-link-alt"></i>
-                Visit Project
+                Open
               </a>
             </div>
           </div>
-          
+
           <div class="project-content">
             <div class="project-description">
-              <h3>Overview</h3>
+              <h3>What it is</h3>
               <p>
-                A fully interactive 3D visualization of an RPI dorm room built with Three.js. This project showcases real-time 3D rendering, interactive furniture manipulation, and advanced performance optimization techniques for web-based 3D applications.
+                A browser-based 3D viewer built with Three.js for the Dorms Space project. You can orbit the room, click on individual pieces of furniture to get info, measure distances between points, and switch between a normal assembled view and an exploded view. It runs at a stable 60 FPS on most hardware, with adaptive quality that scales down for weaker devices.
               </p>
-              
-              <h3>Key Features</h3>
-              <ul>
-                <li><strong>Real-time 3D Rendering:</strong> Smooth 60 FPS rendering with adaptive quality adjustment</li>
-                <li><strong>Interactive Elements:</strong> Click and hover interactions with furniture pieces</li>
-                <li><strong>Measurement Tools:</strong> Built-in distance measurement functionality</li>
-                <li><strong>Exploded View:</strong> Toggle between assembled and exploded furniture views</li>
-                <li><strong>Graphics Presets:</strong> Low/Medium/High quality settings for different devices</li>
-                <li><strong>Performance Monitoring:</strong> Real-time FPS and VRAM usage display</li>
-              </ul>
 
-              <h3>Technical Details</h3>
+              <h3>The interesting parts</h3>
               <p>
-                Built using Three.js for 3D rendering, OrbitControls for camera manipulation, and custom performance optimization algorithms. The project features modular GLB model loading, adaptive quality scaling based on device capabilities, and comprehensive memory management.
+                Getting the geometry pipeline right took most of the work — exporting from NX, cleaning meshes in Blender, and loading them efficiently in the browser without tanking performance. I built a priority-based loading system so the room feels responsive even before all the models finish downloading, and a memory manager that cleans up geometry and textures as the session goes on.
               </p>
-              
-              <h3>Technologies Used</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Three.js</span>
-                <span class="tech-tag">JavaScript ES6+</span>
-                <span class="tech-tag">WebGL</span>
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="cad-modeling" class="project-detail">
-        <div class="container">
-          <div class="project-header">
-            <h2>CAD Modeling Projects</h2>
-          </div>
-          
-          <div class="project-content">
-            <div class="project-description">
-              <h3>Overview</h3>
-              <p>
-                A collection of mechanical and aerospace engineering projects created using industry-standard CAD software including Siemens NX and SolidWorks. These projects demonstrate proficiency in complex part modeling, assembly design, and technical documentation.
-              </p>
-              
-              <h3>Project Types</h3>
-              <ul>
-                <li><strong>Mechanical Assemblies:</strong> Complex multi-part systems with detailed component interactions</li>
-                <li><strong>Aerospace Components:</strong> Precision-engineered parts for aerospace applications</li>
-                <li><strong>Furniture Design:</strong> Parametric models of dorm furniture with accurate dimensions</li>
-                <li><strong>Technical Drawings:</strong> Detailed engineering drawings with GD&T annotations</li>
-              </ul>
-
-              <h3>Software Proficiency</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Siemens NX</span>
-                <span class="tech-tag">SolidWorks</span>
-                <span class="tech-tag">Blender</span>
-                <span class="tech-tag">AutoCAD</span>
-              </div>
-
-              <h3>Skills Demonstrated</h3>
-              <ul>
-                <li>Parametric modeling and design intent</li>
-                <li>Assembly modeling and constraints</li>
-                <li>Surface modeling for complex geometries</li>
-                <li>Model export and optimization for web viewing</li>
-                <li>Technical documentation and annotations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="performance-optimization" class="project-detail">
-        <div class="container">
-          <div class="project-header">
-            <h2>Performance Optimization</h2>
-          </div>
-          
-          <div class="project-content">
-            <div class="project-description">
-              <h3>Overview</h3>
-              <p>
-                Advanced web performance optimization techniques applied to 3D web applications, achieving 44% faster loading times and 47% reduced memory usage through intelligent caching, adaptive quality systems, and memory management.
-              </p>
-              
-              <h3>Optimization Techniques</h3>
-              <ul>
-                <li><strong>Priority-Based Loading:</strong> Intelligent model loading system with high/normal/low priority queues</li>
-                <li><strong>Adaptive Quality:</strong> Real-time quality adjustment based on device capabilities and FPS</li>
-                <li><strong>Memory Management:</strong> Automatic garbage collection and resource cleanup</li>
-                <li><strong>Multi-Layer Caching:</strong> Efficient caching system with size management</li>
-                <li><strong>CDN Optimization:</strong> Fallback systems and compression detection</li>
-              </ul>
-
-              <h3>Performance Metrics</h3>
+              <h3>Performance</h3>
               <div class="metrics-grid">
                 <div class="metric">
                   <h4>44%</h4>
@@ -222,21 +253,21 @@
                 </div>
                 <div class="metric">
                   <h4>92%</h4>
-                  <p>Cache Efficiency</p>
+                  <p>Cache Hit Rate</p>
                 </div>
                 <div class="metric">
                   <h4>60 FPS</h4>
-                  <p>Stable Frame Rate</p>
+                  <p>Target Frame Rate</p>
                 </div>
               </div>
 
-              <h3>Technologies & Methods</h3>
+              <h3>Stack</h3>
               <div class="tech-tags">
-                <span class="tech-tag">Performance API</span>
-                <span class="tech-tag">Memory Profiling</span>
-                <span class="tech-tag">WebGL Optimization</span>
-                <span class="tech-tag">Resource Hints</span>
-                <span class="tech-tag">Lazy Loading</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
               </div>
             </div>
           </div>
@@ -280,4 +311,3 @@
     <script src="script.js" defer></script>
   </body>
 </html>
-

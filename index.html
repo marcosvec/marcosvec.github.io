@@ -15,8 +15,6 @@
     <script>
       (function() {
         const saved = localStorage.getItem('theme');
-        const currentClass = document.documentElement.classList.contains('light') ? 'light' : 'dark';
-        
         const urlParams = new URLSearchParams(window.location.search);
         const urlTheme = urlParams.get('theme');
         if (urlTheme && (urlTheme === 'light' || urlTheme === 'dark')) {

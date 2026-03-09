@@ -211,26 +211,34 @@ document.addEventListener('click', (e) => {
 });
 
 const projects = [
-  {
-    title: 'RPI Dorms Space',
-    desc: 'Leading the CAD modeling effort for accurate 3D models of RPI dorm rooms, built in Siemens NX with an interactive Three.js web viewer.',
+  { 
+    title: 'Interactive 3D Room', 
+    desc: 'A fully interactive 3D dorm room built with Three.js featuring real-time furniture interactions and measurement tools.',
     links: [
-      { text: 'Learn more', href: 'projects.html#rpi-dorms-space', icon: 'fas fa-info-circle' }
+      { text: 'Learn more', href: 'projects.html#interactive-3d-room', icon: 'fas fa-info-circle' },
+      { text: 'Visit', href: 'interactive-room.html', icon: 'fas fa-external-link-alt' }
+    ]
+  },
+  { 
+    title: 'CAD Modeling Projects', 
+    desc: 'Complex mechanical and aerospace engineering projects created using Siemens NX and SolidWorks.',
+    links: [
+      { text: 'Learn more', href: 'projects.html#cad-modeling', icon: 'fas fa-info-circle' }
+    ]
+  },
+  { 
+    title: 'Performance Optimization', 
+    desc: 'Advanced web performance techniques achieving 44% faster loading times and 47% reduced memory usage.',
+    links: [
+      { text: 'Learn more', href: 'projects.html#performance-optimization', icon: 'fas fa-info-circle' }
     ]
   },
   {
     title: 'BikeSuite',
-    desc: 'A point-of-sale and shop management system for bike shops, built to replace Ascend RMS with a faster, more practical workflow.',
+    desc: 'A full-stack SaaS platform for independent bike shops — work orders, POS, inventory, and customer management.',
     links: [
       { text: 'Learn more', href: 'projects.html#bikesuite', icon: 'fas fa-info-circle' },
-      { text: 'Visit', href: 'https://bikesuite.net', icon: 'fas fa-external-link-alt' }
-    ]
-  },
-  {
-    title: 'CAD Modeling',
-    desc: 'Mechanical and aerospace assemblies built in Siemens NX and SolidWorks — coursework, personal projects, and Dorms Space geometry.',
-    links: [
-      { text: 'Learn more', href: 'projects.html#cad-modeling', icon: 'fas fa-info-circle' }
+      { text: 'Try demo', href: 'https://bikesuite.net/demo', icon: 'fas fa-external-link-alt' }
     ]
   }
 ];

@@ -1,40 +1,100 @@
-# Marco Svec — Portfolio
+# Marco Svec - Portfolio Website
 
-Personal portfolio website for Marco Svec, a Mechanical & Aerospace Engineering student at Rensselaer Polytechnic Institute.
+A modern, responsive portfolio website showcasing Marco Svec's work in Mechanical & Aerospace Engineering, CAD modeling, and interactive web development.
 
 ## About
 
-I'm a dual-degree ME/AE student at RPI with a focus on CAD, mechanical systems, and building software that solves real problems. Outside of coursework I work at Merrick Bicycles doing assembly and repairs, lead the CAD side of the RPI-Dorms-Space project using Siemens NX, and develop BikeSuite — a POS system for bike shops.
+This is the personal portfolio website for Marco Svec, a Mechanical & Aerospace Engineering student at Rensselaer Polytechnic Institute (RPI). The site showcases his projects, skills, and professional experience in engineering and web development.
 
-This site is where I keep my project work, both engineering and software. It's built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step, just a clean static site hosted on GitHub Pages.
+## Features
 
-## Projects
+### 🎨 Modern Design
+- **Dark/Light theme** toggle with system preference detection
+- **Responsive design** optimized for all devices
+- **Smooth animations** and transitions
+- **Accessibility-first** approach with ARIA labels and keyboard navigation
 
-**RPI-Dorms-Space** — I lead the CAD modeling effort for this collaborative project, which creates accurate 3D models of RPI dorm rooms. The web viewer you can explore on the site is built in Three.js directly from the NX geometry.
+### 📱 User Experience
+- **Mobile-first** responsive design
+- **Fast loading** with optimized assets
+- **Smooth scrolling** navigation
+- **Interactive contact form** with validation
 
-**BikeSuite** — A bike shop POS system I've been developing to replace Ascend RMS for small shops. It handles service tickets, inventory, and customer records. I'm currently integrating AI features for predictive maintenance and pricing insights.
-
-**CAD portfolio** — Mechanical and aerospace assemblies built in Siemens NX and SolidWorks over the course of my time at RPI.
+### 🚀 Technical Features
+- **Vanilla JavaScript** (ES6+) for optimal performance
+- **CSS Grid & Flexbox** for modern layouts
+- **Font Awesome** icons for visual elements
+- **GitHub Pages** deployment ready
 
 ## File Structure
 
 ```
 marcosvec.github.io/
-├── index.html
-├── projects.html
-├── styles.css
-├── script.js
-├── CNAME
-├── LICENSE
-└── README.md
+├── index.html              # Main portfolio landing page
+├── projects.html           # Detailed projects showcase
+├── styles.css              # Complete site styling
+├── script.js               # Main site JavaScript functionality
+├── CNAME                   # Custom domain configuration
+├── LICENSE                 # MIT license
+└── README.md               # This file
 ```
 
-## Technical notes
+## Pages
 
-The site uses CSS custom properties for theming and persists the user's preference in localStorage with a URL parameter fallback for cases where that doesn't work. The scroll effects are disabled on mobile and for users with reduced motion preferences. The 3D viewer (interactive-room.html) is kept out of the main repo since it's still a work in progress.
+### Home (`index.html`)
+- **Hero section** with introduction and call-to-action
+- **About section** highlighting engineering focus and expertise
+- **Featured projects** overview with links to detailed pages
+- **Contact modal** for easy communication
 
-Browser support targets Chrome 60+, Firefox 55+, Safari 12+, and Edge 79+.
+### Projects (`projects.html`)
+- **Interactive 3D Room** project showcase
+- **CAD Modeling Projects** portfolio
+- **Performance Optimization** work and metrics
+- **Technology tags** and detailed descriptions
+
+## Technologies Used
+
+- **HTML5** - Semantic markup and accessibility
+- **CSS3** - Modern styling with custom properties and Grid/Flexbox
+- **JavaScript ES6+** - Interactive functionality and theme management
+- **Font Awesome** - Icon library for visual elements
+- **GitHub Pages** - Static site hosting
+
+## Customization
+
+### Theme System
+The site uses CSS custom properties for theming:
+- Dark theme (default)
+- Light theme toggle
+- System preference detection
+- Persistent theme storage
+
+### Responsive Breakpoints
+- **Desktop**: 1200px+ container width
+- **Tablet**: 768px - 1199px
+- **Mobile**: 480px - 767px
+- **Small Mobile**: < 480px
+
+## Browser Support
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
+
+## Performance
+- Optimized for GitHub Pages deployment
+- Minimal dependencies for fast loading
+- Efficient CSS and JavaScript
+- Responsive images and assets
+
+## Development
+Built with modern web standards:
+- Semantic HTML5
+- CSS3 with custom properties
+- Vanilla JavaScript (ES6+)
+- Mobile-first responsive design
+- Accessibility best practices
 
 ## License
-
-MIT.
+MIT License - feel free to use and modify for your projects.

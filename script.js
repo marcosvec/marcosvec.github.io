@@ -180,31 +180,16 @@ document.addEventListener('click', (e) => {
 });
 
 const projects = [
-  { 
-    title: 'Interactive 3D Room', 
-    desc: 'A fully interactive 3D dorm room built with Three.js featuring real-time furniture interactions and measurement tools.',
+  {
+    title: 'Autonomous Boat: Propulsion Lead',
+    desc: 'Introduction to Engineering Design team project at RPI, Spring 2026. Led propulsion and steering and designed a custom thruster mount in Siemens NX.',
     links: [
-      { text: 'Learn more', href: 'projects.html#interactive-3d-room', icon: 'fas fa-info-circle' },
-      { text: 'Visit', href: 'interactive-room.html', icon: 'fas fa-external-link-alt' }
-    ]
-  },
-  { 
-    title: 'CAD Modeling Projects', 
-    desc: 'Complex mechanical and aerospace engineering projects created using Siemens NX and SolidWorks.',
-    links: [
-      { text: 'Learn more', href: 'projects.html#cad-modeling', icon: 'fas fa-info-circle' }
-    ]
-  },
-  { 
-    title: 'Performance Optimization', 
-    desc: 'Advanced web performance techniques achieving 44% faster loading times and 47% reduced memory usage.',
-    links: [
-      { text: 'Learn more', href: 'projects.html#performance-optimization', icon: 'fas fa-info-circle' }
+      { text: 'Learn more', href: 'projects.html#autonomous-boat', icon: 'fas fa-info-circle' }
     ]
   },
   {
     title: 'BikeSuite',
-    desc: 'A full-stack SaaS platform for independent bike shops — work orders, POS, inventory, and customer management.',
+    desc: 'Full-stack SaaS platform for independent bike shops. Work orders, POS, inventory, and customer management. Live at bikesuite.net.',
     links: [
       { text: 'Learn more', href: 'projects.html#bikesuite', icon: 'fas fa-info-circle' },
       { text: 'Try demo', href: 'https://bikesuite.net/demo', icon: 'fas fa-external-link-alt' }

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Marco Svec's Projects - Interactive 3D Room, CAD Models, and Performance Optimization work.">
-    <meta name="keywords" content="Marco Svec, Projects, CAD, 3D modeling, Three.js, Engineering">
+    <meta name="description" content="Marco Svec's Projects - Autonomous boat propulsion, mechanical design in Siemens NX, and the BikeSuite SaaS platform.">
+    <meta name="keywords" content="Marco Svec, Projects, Siemens NX, BLDC, Propulsion, Autonomous Systems, Full-Stack, BikeSuite">
     <meta name="author" content="Marco Svec">
     <title>Projects - Marco Svec</title>
     <link rel="stylesheet" href="styles.css">
@@ -95,148 +95,63 @@
       <section class="projects-hero">
         <div class="container">
           <h1>My Projects</h1>
-          <p>Explore my work in interactive 3D visualization, CAD modeling, and performance optimization.</p>
+          <p>My work in autonomous systems, mechanical design, and full-stack development.</p>
         </div>
       </section>
 
-      <section id="interactive-3d-room" class="project-detail">
+      <section id="autonomous-boat" class="project-detail">
         <div class="container">
           <div class="project-header">
-            <h2>Interactive 3D Dorm Room</h2>
-            <div class="project-links">
-              <a href="interactive-room.html" class="button" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                Visit Project
-              </a>
-            </div>
+            <h2>Autonomous Boat: Propulsion &amp; Steering Lead</h2>
           </div>
-          
+
           <div class="project-content">
             <div class="project-description">
               <h3>Overview</h3>
               <p>
-                A fully interactive 3D visualization of an RPI dorm room built with Three.js. This project showcases real-time 3D rendering, interactive furniture manipulation, and advanced performance optimization techniques for web-based 3D applications.
+                Team Roboatics, RPI Introduction to Engineering Design (ENGR 2050), Spring 2026. Role: Propulsion &amp; Steering Lead / Scribe. Designed and built the propulsion system for a debris-collecting catamaran, using differential thrust for steering without a rudder.
               </p>
-              
-              <h3>Key Features</h3>
+
+              <h3>Drive System</h3>
               <ul>
-                <li><strong>Real-time 3D Rendering:</strong> Smooth 60 FPS rendering with adaptive quality adjustment</li>
-                <li><strong>Interactive Elements:</strong> Click and hover interactions with furniture pieces</li>
-                <li><strong>Measurement Tools:</strong> Built-in distance measurement functionality</li>
-                <li><strong>Exploded View:</strong> Toggle between assembled and exploded furniture views</li>
-                <li><strong>Graphics Presets:</strong> Low/Medium/High quality settings for different devices</li>
-                <li><strong>Performance Monitoring:</strong> Real-time FPS and VRAM usage display</li>
+                <li><strong>Motors:</strong> 2&times; A2212 1000KV brushless DC (BLDC) motors</li>
+                <li><strong>ESCs:</strong> LittleBee BLHeli-S 30A, configured in 3D (bidirectional) mode</li>
+                <li><strong>Power:</strong> 3S LiPo battery</li>
+                <li><strong>Housings:</strong> 3D-printed OpenThruster shells</li>
+                <li><strong>Steering:</strong> Differential thrust, no rudder</li>
               </ul>
 
-              <h3>Technical Details</h3>
+              <h3>Design Process</h3>
               <p>
-                Built using Three.js for 3D rendering, OrbitControls for camera manipulation, and custom performance optimization algorithms. The project features modular GLB model loading, adaptive quality scaling based on device capabilities, and comprehensive memory management.
+                Bidirectional operation was a design requirement. The selected drive system paired brushless motors with bidirectional ESCs and OpenThruster housings so each thruster could run forward and reverse.
               </p>
-              
+              <p>
+                I designed a custom PETG thruster mount in Siemens NX with a bullet-nose profile, using a Boolean subtraction to form the mating geometry around the thruster housing. The mount connected the propulsion hardware to the boat; the OpenThruster housings were an existing design.
+              </p>
+              <p>
+                Motor windings were waterproofed with enamel coating; an early attempt using nail polish failed. Also caught early: M3 screws that were too long damaged the motor windings on initial assemblies. Shorter screws fixed it.
+              </p>
+
+              <h3>Bench Testing</h3>
+              <p>
+                For the classroom demonstration, we ran the motors in air and measured the speed of a pinwheel in the propeller airflow. This demonstrated operation of the propulsion system; it was not a measurement of underwater thrust or a validation of autonomous navigation.
+              </p>
+
+              <h3>Milestones</h3>
+              <ul>
+                <li>MS1 memo: March 11, 2026</li>
+                <li>MS2 demo: April 21, 2026</li>
+                <li>Final presentation: April 24, 2026</li>
+              </ul>
+
               <h3>Technologies Used</h3>
               <div class="tech-tags">
-                <span class="tech-tag">Three.js</span>
-                <span class="tech-tag">JavaScript ES6+</span>
-                <span class="tech-tag">WebGL</span>
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="cad-modeling" class="project-detail">
-        <div class="container">
-          <div class="project-header">
-            <h2>CAD Modeling Projects</h2>
-          </div>
-          
-          <div class="project-content">
-            <div class="project-description">
-              <h3>Overview</h3>
-              <p>
-                A collection of mechanical and aerospace engineering projects created using industry-standard CAD software including Siemens NX and SolidWorks. These projects demonstrate proficiency in complex part modeling, assembly design, and technical documentation.
-              </p>
-              
-              <h3>Project Types</h3>
-              <ul>
-                <li><strong>Mechanical Assemblies:</strong> Complex multi-part systems with detailed component interactions</li>
-                <li><strong>Aerospace Components:</strong> Precision-engineered parts for aerospace applications</li>
-                <li><strong>Furniture Design:</strong> Parametric models of dorm furniture with accurate dimensions</li>
-                <li><strong>Technical Drawings:</strong> Detailed engineering drawings with GD&T annotations</li>
-              </ul>
-
-              <h3>Software Proficiency</h3>
-              <div class="tech-tags">
                 <span class="tech-tag">Siemens NX</span>
-                <span class="tech-tag">SolidWorks</span>
-                <span class="tech-tag">Blender</span>
-                <span class="tech-tag">AutoCAD</span>
-              </div>
-
-              <h3>Skills Demonstrated</h3>
-              <ul>
-                <li>Parametric modeling and design intent</li>
-                <li>Assembly modeling and constraints</li>
-                <li>Surface modeling for complex geometries</li>
-                <li>Model export and optimization for web viewing</li>
-                <li>Technical documentation and annotations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="performance-optimization" class="project-detail">
-        <div class="container">
-          <div class="project-header">
-            <h2>Performance Optimization</h2>
-          </div>
-          
-          <div class="project-content">
-            <div class="project-description">
-              <h3>Overview</h3>
-              <p>
-                Advanced web performance optimization techniques applied to 3D web applications, achieving 44% faster loading times and 47% reduced memory usage through intelligent caching, adaptive quality systems, and memory management.
-              </p>
-              
-              <h3>Optimization Techniques</h3>
-              <ul>
-                <li><strong>Priority-Based Loading:</strong> Intelligent model loading system with high/normal/low priority queues</li>
-                <li><strong>Adaptive Quality:</strong> Real-time quality adjustment based on device capabilities and FPS</li>
-                <li><strong>Memory Management:</strong> Automatic garbage collection and resource cleanup</li>
-                <li><strong>Multi-Layer Caching:</strong> Efficient caching system with size management</li>
-                <li><strong>CDN Optimization:</strong> Fallback systems and compression detection</li>
-              </ul>
-
-              <h3>Performance Metrics</h3>
-              <div class="metrics-grid">
-                <div class="metric">
-                  <h4>44%</h4>
-                  <p>Faster Loading</p>
-                </div>
-                <div class="metric">
-                  <h4>47%</h4>
-                  <p>Less Memory</p>
-                </div>
-                <div class="metric">
-                  <h4>92%</h4>
-                  <p>Cache Efficiency</p>
-                </div>
-                <div class="metric">
-                  <h4>60 FPS</h4>
-                  <p>Stable Frame Rate</p>
-                </div>
-              </div>
-
-              <h3>Technologies & Methods</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Performance API</span>
-                <span class="tech-tag">Memory Profiling</span>
-                <span class="tech-tag">WebGL Optimization</span>
-                <span class="tech-tag">Resource Hints</span>
-                <span class="tech-tag">Lazy Loading</span>
+                <span class="tech-tag">BLDC / ESC</span>
+                <span class="tech-tag">OpenThruster</span>
+                <span class="tech-tag">LiPo</span>
+                <span class="tech-tag">3D Printing</span>
+                <span class="tech-tag">Systems Integration</span>
               </div>
             </div>
           </div>
@@ -263,7 +178,7 @@
             <div class="project-description">
               <h3>Overview</h3>
               <p>
-                A full-stack SaaS platform built for independent bike shops. BikeSuite handles the day-to-day operations of a repair shop — work orders, point of sale, inventory tracking, and customer management — in a single invite-only web app.
+                A full-stack SaaS platform built for independent bike shops, informed by my experience at Merrick Bicycles, my family's bike shop. BikeSuite brings work orders, point of sale, inventory tracking, and customer management into a single invite-only web app.
               </p>
 
               <h3>Key Features</h3>

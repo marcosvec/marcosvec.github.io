@@ -32,6 +32,7 @@ models/
 Thumbs.db
 
 # IDE files
+*.code-workspace
 .vscode/
 .idea/
 *.swp

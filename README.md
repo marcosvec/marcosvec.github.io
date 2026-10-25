@@ -1,6 +1,6 @@
 # Marco Svec - Portfolio Website
 
-A modern, responsive portfolio website showcasing Marco Svec's work in Mechanical & Aerospace Engineering, CAD modeling, and interactive web development.
+A modern, responsive portfolio website showcasing Marco Svec's work in Mechanical & Aerospace Engineering, CAD modeling, and full-stack web development.
 
 ## About
 
@@ -18,7 +18,6 @@ This is the personal portfolio website for Marco Svec, a Mechanical & Aerospace 
 - **Mobile-first** responsive design
 - **Fast loading** with optimized assets
 - **Smooth scrolling** navigation
-- **Interactive contact form** with validation
 
 ### 🚀 Technical Features
 - **Vanilla JavaScript** (ES6+) for optimal performance
@@ -45,12 +44,10 @@ marcosvec.github.io/
 - **Hero section** with introduction and call-to-action
 - **About section** highlighting engineering focus and expertise
 - **Featured projects** overview with links to detailed pages
-- **Contact modal** for easy communication
 
 ### Projects (`projects.html`)
-- **Interactive 3D Room** project showcase
-- **CAD Modeling Projects** portfolio
-- **Performance Optimization** work and metrics
+- **Autonomous Boat (Roboat)** project showcase
+- **BikeSuite** SaaS platform showcase
 - **Technology tags** and detailed descriptions
 
 ## Technologies Used

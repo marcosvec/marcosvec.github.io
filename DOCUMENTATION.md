@@ -23,7 +23,6 @@ Complete documentation for marcosvec.github.io portfolio website.
 - Mobile-first responsive design
 - Fast loading with optimized assets
 - Smooth scrolling navigation
-- Interactive contact form with validation
 
 ### Technical Features
 - Vanilla JavaScript (ES6+) for optimal performance
@@ -39,11 +38,8 @@ Complete documentation for marcosvec.github.io portfolio website.
 marcosvec.github.io/
 ├── index.html              # Main portfolio landing page
 ├── projects.html           # Detailed projects showcase
-├── interactive-room.html   # Interactive 3D room project
 ├── styles.css              # Complete site styling
 ├── script.js               # Main site JavaScript functionality
-├── model-loader.js         # 3D model loading system
-├── performance-optimizer.js # Performance optimization utilities
 ├── CNAME                   # Custom domain configuration
 ├── DOCUMENTATION.md        # This file (all documentation)
 ├── CHANGELOG.md            # Version history and changes

@@ -258,28 +258,6 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
   border-top: 1px solid var(--border);
 }
 
-.background-selector {
-  margin-top: 15px;
-}
-
-.background-selector label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.background-selector select {
-  width: 100%;
-  padding: 8px 12px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  color: var(--text);
-  cursor: pointer;
-  font-size: 14px;
-}
-
 .floating-name {
   position: fixed;
   top: 20px;
@@ -461,18 +439,6 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
   border-color: var(--primary);
 }
 
-.button.social {
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-.button.social:hover {
-  background: var(--primary);
-  color: var(--primary-contrast);
-  border-color: var(--primary);
-}
-
 .section {
   padding: var(--about-spacing) 0;
 }
@@ -603,7 +569,8 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
 .card .button {
   align-self: flex-start;
   font-size: 0.95rem;
-  padding: 10px 20px;
+  min-height: 48px;
+  padding: 12px 20px;
 }
 
 .card-actions {
@@ -747,33 +714,6 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
   border: 1px solid color-mix(in oklab, var(--primary), transparent 70%);
 }
 
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
-}
-
-.metric {
-  text-align: center;
-  padding: 20px;
-  background: color-mix(in oklab, var(--primary), transparent 90%);
-  border-radius: var(--radius-lg);
-  border: 1px solid color-mix(in oklab, var(--primary), transparent 70%);
-}
-
-.metric h4 {
-  font-size: 2.5rem;
-  margin: 0 0 8px 0;
-  color: var(--primary);
-}
-
-.metric p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
 .site-footer {
   border-top: 1px solid var(--border); 
   margin-top: 60px;
@@ -820,10 +760,6 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
     grid-template-columns: 1fr;
   }
 
-  .about-content {
-    padding: 30px 25px;
-  }
-
   .project-content {
     padding: 30px 20px;
   }
@@ -831,10 +767,6 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
   .project-header {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .metrics-grid {
-    grid-template-columns: 1fr 1fr;
   }
 
   .about-card {
@@ -858,8 +790,8 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
 
   .persistent-icons button,
   .persistent-icons a {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     font-size: 18px;
   }
 }
@@ -871,15 +803,11 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
   }
 
   .sidebar-toggle {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     font-size: 18px;
     top: 10px;
     left: 10px;
-  }
-
-  .about-content {
-    padding: 25px 20px;
   }
 
   .about-card {
@@ -953,8 +881,8 @@ body:has(.sidebar.open) .sidebar-toggle .hamburger .line:nth-child(3) {
 
   .persistent-icons button,
   .persistent-icons a {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     font-size: 16px;
   }
 }

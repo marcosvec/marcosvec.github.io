@@ -3,43 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Marco Svec - Mechanical & Aerospace Engineering student at RPI. Portfolio featuring mechanical design, propulsion systems, and software projects.">
+    <meta name="description" content="Marco Svec - Mechanical &amp; Aerospace Engineering student at RPI. Portfolio featuring mechanical design, propulsion systems, and software projects.">
     <meta name="keywords" content="Marco Svec, RPI, Mechanical Engineering, Aerospace Engineering, Siemens NX, Autonomous Systems, BikeSuite, CertBuddy">
     <meta name="author" content="Marco Svec">
     <title>Marco Svec - Portfolio</title>
+    <link rel="canonical" href="https://www.marcosvec.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marco Svec">
+    <meta property="og:url" content="https://www.marcosvec.com/">
+    <meta property="og:title" content="Marco Svec - Portfolio">
+    <meta property="og:description" content="Marco Svec - Mechanical &amp; Aerospace Engineering student at RPI. Portfolio featuring mechanical design, propulsion systems, and software projects.">
+    <meta property="og:image" content="https://www.marcosvec.com/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Marco Svec. Mechanical and Aerospace Engineering.">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marco Svec - Portfolio">
+    <meta name="twitter:description" content="Marco Svec - Mechanical &amp; Aerospace Engineering student at RPI. Portfolio featuring mechanical design, propulsion systems, and software projects.">
+    <meta name="twitter:image" content="https://www.marcosvec.com/og.png">
+    <meta name="twitter:image:alt" content="Marco Svec. Mechanical and Aerospace Engineering.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=20261104">
-
-    <script>
-      (function() {
-        const saved = localStorage.getItem('theme');
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlTheme = urlParams.get('theme');
-        if (urlTheme && (urlTheme === 'light' || urlTheme === 'dark')) {
-          if (urlTheme === 'light') {
-            document.documentElement.classList.add('light');
-            localStorage.setItem('theme', 'light');
-          } else {
-            document.documentElement.classList.remove('light');
-            localStorage.setItem('theme', 'dark');
-          }
-        } else if (saved === 'light') {
-          document.documentElement.classList.add('light');
-        } else if (saved === 'dark') {
-          document.documentElement.classList.remove('light');
-        } else {
-          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-          if (prefersLight) {
-            document.documentElement.classList.add('light');
-            localStorage.setItem('theme', 'light');
-          } else {
-            document.documentElement.classList.remove('light');
-            localStorage.setItem('theme', 'dark');
-          }
-        }
-      })();
-    </script>
+    <link rel="stylesheet" href="styles.css?v=20261104b">
+    <script src="theme-init.js?v=20261104b"></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -150,6 +138,6 @@
       </footer>
     </main>
 
-    <script src="script.js?v=20261104" defer></script>
+    <script src="script.js?v=20261104b" defer></script>
   </body>
 </html>

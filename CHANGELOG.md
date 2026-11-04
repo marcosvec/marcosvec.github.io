@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Added canonical URLs, Open Graph and Twitter card tags, a share image, `robots.txt`, and `sitemap.xml` for www.marcosvec.com.
 - BikeSuite is the lead project. Links go to the live demo at bikesuite.marcosvec.com and the public repo. The description matches that browser demo.
 - Added a short CertBuddy entry. It is in progress and has no public link.
 - Replaced the Font Awesome CDN and the unused Google Fonts preconnect with inline icons.

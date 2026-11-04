@@ -33,6 +33,10 @@ marcosvec.github.io/
 ├── projects.html           # Detailed projects showcase
 ├── styles.css              # Complete site styling
 ├── script.js               # Main site JavaScript functionality
+├── theme-init.js           # Theme applied before first paint
+├── og.png                  # Share image
+├── robots.txt              # Crawler rules
+├── sitemap.xml             # Page list for www.marcosvec.com
 ├── CNAME                   # Custom domain configuration
 ├── LICENSE                 # MIT license
 └── README.md               # This file

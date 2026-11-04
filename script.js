@@ -198,14 +198,14 @@ const projects = [
     links: [
       { text: 'Live demo', href: 'https://bikesuite.marcosvec.com', icon: 'external', external: true },
       { text: 'Source', href: 'https://github.com/marcosvec/bikesuite', icon: 'github', external: true },
-      { text: 'Learn more', href: 'projects.html#bikesuite', icon: 'info' }
+      { text: 'BikeSuite details', href: 'projects.html#bikesuite', icon: 'info' }
     ]
   },
   {
     title: 'Autonomous Boat: Propulsion Lead',
     desc: 'Introduction to Engineering Design team project at RPI, Spring 2026. Led propulsion and steering and designed a custom thruster mount in Siemens NX.',
     links: [
-      { text: 'Learn more', href: 'projects.html#autonomous-boat', icon: 'info' }
+      { text: 'Boat project details', href: 'projects.html#autonomous-boat', icon: 'info' }
     ]
   },
   {
@@ -213,7 +213,7 @@ const projects = [
     desc: 'A cannabis COA lookup app. Still in progress, with no public demo yet.',
     status: 'In progress',
     links: [
-      { text: 'Learn more', href: 'projects.html#certbuddy', icon: 'info' }
+      { text: 'CertBuddy details', href: 'projects.html#certbuddy', icon: 'info' }
     ]
   }
 ];

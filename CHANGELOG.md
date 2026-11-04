@@ -7,26 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- **Email Contact Integration**: Added info@marcosvec.com email address throughout website
-  - Displayed in footer on all pages
-  - Added to contact modal with mailto: link
-  - Contact form opens email client with pre-filled message
-  - Added comprehensive email setup guide to DOCUMENTATION.md
-  - Includes step-by-step Namecheap configuration instructions
-  - DMARC setup guide for improved email deliverability
-  - Troubleshooting section for common email forwarding issues
-  - Gmail SMTP configuration instructions
-- **Documentation Consolidation**: Consolidated ALL documentation into designated files only
-  - All documentation moved to DOCUMENTATION.md, CHANGELOG.md, or PRIVATE_DOCUMENTATION.md
-  - Deleted all standalone documentation files (TERMS_OF_SERVICE.md, PRIVACY_POLICY.md, SERVICE_AGREEMENT.md, SHOPIFY_INTEGRATION_ANALYSIS.md, SHOPIFY_INTEGRATION_SUMMARY.md, RENAME_SUMMARY.md, NAME_ANALYSIS.md, NAME_RECOMMENDATIONS.md, ANSWERS.md, GENERATE_LEGAL_DOCS.md)
-  - Established documentation standards: ALL documentation must be in DOCUMENTATION.md, CHANGELOG.md, or PRIVATE_DOCUMENTATION.md only
-  - No standalone documentation files permitted
+### Changed
+- BikeSuite is the lead project. Links go to the live demo at bikesuite.marcosvec.com and the public repo. The description matches that browser demo.
+- Added a short CertBuddy entry. It is in progress and has no public link.
+- Replaced the Font Awesome CDN and the unused Google Fonts preconnect with inline icons.
+- Added a simple favicon.
+
 ### Fixed
+- About cards overflowing on narrow screens.
+- Project actions stacking on small screens, with room to scroll past the corner icons.
+- The scrolling name is desktop-only, so it does not cover card text on a phone.
+- Skip link, menu keyboard behavior, visible focus, and names on icon-only links.
+- Sections staying readable if JavaScript does not run.
+- Scroll effects running once per frame, without the extra drift after scrolling stops.
 
 ### Planned
-- Performance optimization
-- Accessibility improvements
 - Additional interactive features
 
 ## [1.0.2] - 2025-01-27

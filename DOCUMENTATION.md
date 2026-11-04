@@ -27,7 +27,7 @@ Complete documentation for marcosvec.github.io portfolio website.
 ### Technical Features
 - Vanilla JavaScript (ES6+) for optimal performance
 - CSS Grid & Flexbox for modern layouts
-- Font Awesome icons for visual elements
+- Inline SVG icons, with no third-party icon font
 - GitHub Pages deployment ready
 
 ---

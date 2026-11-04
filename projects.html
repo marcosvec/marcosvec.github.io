@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Marco Svec's Projects - Autonomous boat propulsion, mechanical design in Siemens NX, and the BikeSuite SaaS platform.">
-    <meta name="keywords" content="Marco Svec, Projects, Siemens NX, BLDC, Propulsion, Autonomous Systems, Full-Stack, BikeSuite">
+    <meta name="description" content="Marco Svec's projects: the BikeSuite bike-shop demo, an RPI autonomous-boat propulsion project, and CertBuddy, a COA lookup app in progress.">
+    <meta name="keywords" content="Marco Svec, Projects, Siemens NX, BLDC, Propulsion, Autonomous Systems, BikeSuite, CertBuddy">
     <meta name="author" content="Marco Svec">
     <title>Projects - Marco Svec</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css?v=20261104">
+
     <script>
       (function() {
         const saved = localStorage.getItem('theme');
-        const currentClass = document.documentElement.classList.contains('light') ? 'light' : 'dark';
-        
+
         const urlParams = new URLSearchParams(window.location.search);
         const urlTheme = urlParams.get('theme');
         if (urlTheme && (urlTheme === 'light' || urlTheme === 'dark')) {
@@ -44,30 +42,37 @@
     </script>
   </head>
   <body>
-    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle navigation sidebar">
-      <i class="fas fa-bars"></i>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <button id="sidebarToggle" class="sidebar-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+      <span class="hamburger" aria-hidden="true">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </span>
     </button>
 
-    <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar" inert>
       <div class="sidebar-header">
       </div>
-      
-      <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link" id="homeLink">
-          <i class="fas fa-home"></i>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3.2 3 11h2.2v8.3c0 .8.7 1.5 1.5 1.5H10v-5.5h4V20.8h3.3c.8 0 1.5-.7 1.5-1.5V11H21L12 3.2z"/></svg>
           <span>Home</span>
         </a>
         <a href="index.html#about" class="nav-link">
-          <i class="fas fa-user"></i>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 12.2a4.1 4.1 0 1 0 0-8.2 4.1 4.1 0 0 0 0 8.2zm0 2.1c-3.6 0-6.8 1.9-6.8 4.3V20h13.6v-1.4c0-2.4-3.2-4.3-6.8-4.3z"/></svg>
           <span>About</span>
         </a>
-        <a href="projects.html" class="nav-link active">
-          <i class="fas fa-folder-open"></i>
+        <a href="projects.html" class="nav-link active" aria-current="page">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M3.5 6.2c0-.9.7-1.6 1.6-1.6h4.2l1.7 1.8h7.9c.9 0 1.6.7 1.6 1.6v9.2c0 .9-.7 1.6-1.6 1.6H5.1c-.9 0-1.6-.7-1.6-1.6V6.2z"/></svg>
           <span>Projects</span>
         </a>
-        <a href="https://www.linkedin.com/in/marco-svec-042b4a23b" target="_blank" rel="noopener" class="nav-link">
-          <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/marco-svec-042b4a23b" target="_blank" rel="noopener noreferrer" class="nav-link">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.06c.53-1 1.84-2.1 3.79-2.1 4.05 0 4.8 2.67 4.8 6.14V24h-4v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.06V24h-4V8.5z"/></svg>
           <span>LinkedIn</span>
+          <span class="sr-only">(opens in a new tab)</span>
         </a>
       </nav>
 
@@ -76,26 +81,79 @@
     </aside>
 
     <div class="floating-name" id="floatingName">
-      <h2>Marco Svec</h2>
+      <p class="floating-name-text">Marco Svec</p>
     </div>
 
     <div class="persistent-icons">
-      <a href="https://github.com/marcosvec" target="_blank" rel="noopener" class="persistent-icon" title="GitHub">
-        <i class="fab fa-github"></i>
+      <a href="https://github.com/marcosvec" target="_blank" rel="noopener noreferrer" class="persistent-icon" aria-label="GitHub (opens in a new tab)">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5C5.37.5.5 5.37.5 12a11.5 11.5 0 0 0 7.86 10.91c.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.17-3.09-.12-.29-.5-1.46.12-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.58.24 2.75.12 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.37 18.63.5 12 .5z"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/marco-svec-042b4a23b?trk=people-guest_people_search-card" target="_blank" rel="noopener" class="persistent-icon" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/marco-svec-042b4a23b" target="_blank" rel="noopener noreferrer" class="persistent-icon" aria-label="LinkedIn (opens in a new tab)">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.06c.53-1 1.84-2.1 3.79-2.1 4.05 0 4.8 2.67 4.8 6.14V24h-4v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.06V24h-4V8.5z"/></svg>
       </a>
-      <button id="persistentThemeToggle" aria-label="Toggle theme" title="Toggle theme" type="button">
-        <i class="fas fa-moon"></i>
+      <button id="persistentThemeToggle" aria-label="Switch to light theme" title="Switch to light theme" type="button" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14.4 2.4a9 9 0 1 0 7.2 12.8A7.4 7.4 0 0 1 14.4 2.4z"/></svg>
       </button>
     </div>
 
-    <main class="main-content">
+    <main class="main-content" id="content">
       <section class="projects-hero">
         <div class="container">
           <h1>My Projects</h1>
           <p>My work in autonomous systems, mechanical design, and full-stack development.</p>
+        </div>
+      </section>
+
+      <section id="bikesuite" class="project-detail">
+        <div class="container">
+          <div class="project-header">
+            <h2>BikeSuite</h2>
+            <div class="project-links">
+              <a href="https://bikesuite.marcosvec.com" class="button" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14 3h7v7h-2.2V6.6l-9.1 9.1-1.6-1.6 9.1-9.1H14V3zM5 5h6.2v2.2H7.2v9.6h9.6V13H19v5.8c0 .7-.5 1.2-1.2 1.2H5.2C4.5 20 4 19.5 4 18.8V6.2C4 5.5 4.5 5 5.2 5H5z"/></svg>
+                Live demo
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+              <a href="https://github.com/marcosvec/bikesuite" class="button secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5C5.37.5.5 5.37.5 12a11.5 11.5 0 0 0 7.86 10.91c.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.17-3.09-.12-.29-.5-1.46.12-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.58.24 2.75.12 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.37 18.63.5 12 .5z"/></svg>
+                Source
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-description">
+              <h3>Overview</h3>
+              <p>
+                A browser-based demo of shop software for independent bike shops, informed by my experience at Merrick Bicycles, my family's bike shop. BikeSuite covers work orders, point of sale, inventory, and customer records. The demo runs on seeded data stored in the browser. There is no account server, database, or payment processor.
+              </p>
+
+              <h3>Key Features</h3>
+              <ul>
+                <li><strong>Work orders:</strong> Track a repair from intake through pickup</li>
+                <li><strong>Check-in:</strong> Open a work order when a bike is dropped off</li>
+                <li><strong>Point of sale:</strong> A cart and checkout stored in the browser</li>
+                <li><strong>Inventory:</strong> Stock, categories, and a reference-catalog import</li>
+                <li><strong>Customers:</strong> Records with visit history from the demo data</li>
+                <li><strong>Demo sign-in:</strong> Any value is accepted, including a blank one, and the password is not stored</li>
+              </ul>
+
+              <h3>Technical Details</h3>
+              <p>
+                Built with Next.js 16 (App Router, static export), TypeScript, and Tailwind CSS. The interface uses shadcn/ui. GitHub Pages serves the live demo at <a href="https://bikesuite.marcosvec.com" target="_blank" rel="noopener noreferrer">bikesuite.marcosvec.com</a>. Source is on <a href="https://github.com/marcosvec/bikesuite" target="_blank" rel="noopener noreferrer">GitHub</a>.
+              </p>
+
+              <h3>Technologies Used</h3>
+              <ul class="tech-tags">
+                <li class="tech-tag">Next.js 16</li>
+                <li class="tech-tag">TypeScript</li>
+                <li class="tech-tag">Tailwind CSS</li>
+                <li class="tech-tag">shadcn/ui</li>
+                <li class="tech-tag">GitHub Pages</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -145,67 +203,32 @@
               </ul>
 
               <h3>Technologies Used</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Siemens NX</span>
-                <span class="tech-tag">BLDC / ESC</span>
-                <span class="tech-tag">OpenThruster</span>
-                <span class="tech-tag">LiPo</span>
-                <span class="tech-tag">3D Printing</span>
-                <span class="tech-tag">Systems Integration</span>
-              </div>
+              <ul class="tech-tags">
+                <li class="tech-tag">Siemens NX</li>
+                <li class="tech-tag">BLDC / ESC</li>
+                <li class="tech-tag">OpenThruster</li>
+                <li class="tech-tag">LiPo</li>
+                <li class="tech-tag">3D Printing</li>
+                <li class="tech-tag">Systems Integration</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="bikesuite" class="project-detail">
+      <section id="certbuddy" class="project-detail">
         <div class="container">
           <div class="project-header">
-            <h2>BikeSuite</h2>
-            <div class="project-links">
-              <a href="https://bikesuite.net/demo" class="button" target="_blank" rel="noopener">
-                <i class="fas fa-external-link-alt"></i>
-                Try Demo
-              </a>
-              <a href="https://bikesuite.net" class="button secondary" target="_blank" rel="noopener">
-                <i class="fas fa-globe"></i>
-                bikesuite.net
-              </a>
-            </div>
+            <h2>CertBuddy</h2>
+            <p class="status-pill">In progress</p>
           </div>
 
           <div class="project-content">
             <div class="project-description">
               <h3>Overview</h3>
               <p>
-                A full-stack SaaS platform built for independent bike shops, informed by my experience at Merrick Bicycles, my family's bike shop. BikeSuite brings work orders, point of sale, inventory tracking, and customer management into a single invite-only web app.
+                A cannabis certificate of analysis (COA) lookup app. Still in progress. The repository is private, so there is no public demo or source link yet.
               </p>
-
-              <h3>Key Features</h3>
-              <ul>
-                <li><strong>Work Orders:</strong> Create, track, and update repair jobs with line items, status flow, and payment collection</li>
-                <li><strong>Point of Sale:</strong> Cart-based POS with product lookup, customer association, tax calculation, and payment processing</li>
-                <li><strong>Inventory:</strong> Product catalog with stock levels, reorder points, and bulk management</li>
-                <li><strong>Customer Management:</strong> Customer profiles with repair history and contact info</li>
-                <li><strong>Invite-Only Auth:</strong> Shops get their own organization — staff are invited by the owner, no self-signup</li>
-                <li><strong>Live Demo:</strong> Full read-only demo at <a href="https://bikesuite.net/demo" target="_blank" rel="noopener">bikesuite.net/demo</a> — no login required</li>
-              </ul>
-
-              <h3>Technical Details</h3>
-              <p>
-                Built on Next.js 15 (App Router) with TypeScript and Tailwind CSS v4. Auth and database powered by Supabase (Postgres + row-level security per organization). Deployed on Vercel with automatic production deploys.
-              </p>
-
-              <h3>Technologies Used</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Next.js 15</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">Supabase</span>
-                <span class="tech-tag">Postgres</span>
-                <span class="tech-tag">Vercel</span>
-                <span class="tech-tag">Radix UI</span>
-              </div>
             </div>
           </div>
         </div>
@@ -218,7 +241,6 @@
       </footer>
     </main>
 
-    <script src="script.js" defer></script>
+    <script src="script.js?v=20261104" defer></script>
   </body>
 </html>
-

@@ -22,7 +22,7 @@ This is the personal portfolio website for Marco Svec, a Mechanical & Aerospace 
 ### 🚀 Technical Features
 - **Vanilla JavaScript** (ES6+) for optimal performance
 - **CSS Grid & Flexbox** for modern layouts
-- **Font Awesome** icons for visual elements
+- **Inline SVG** icons, with no third-party icon font
 - **GitHub Pages** deployment ready
 
 ## File Structure
@@ -46,8 +46,9 @@ marcosvec.github.io/
 - **Featured projects** overview with links to detailed pages
 
 ### Projects (`projects.html`)
+- **BikeSuite** browser demo for independent bike shops, with a live demo and public source
 - **Autonomous Boat (Roboat)** project showcase
-- **BikeSuite** SaaS platform showcase
+- **CertBuddy** short entry, in progress, with no public link
 - **Technology tags** and detailed descriptions
 
 ## Technologies Used
@@ -55,7 +56,7 @@ marcosvec.github.io/
 - **HTML5** - Semantic markup and accessibility
 - **CSS3** - Modern styling with custom properties and Grid/Flexbox
 - **JavaScript ES6+** - Interactive functionality and theme management
-- **Font Awesome** - Icon library for visual elements
+- **Inline SVG** - Icons with no extra font download
 - **GitHub Pages** - Static site hosting
 
 ## Customization
